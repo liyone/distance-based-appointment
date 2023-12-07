@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Additional styles if needed */
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-400 to-purple-600 min-h-screen flex items-center justify-center">
+    <div class="bg-white p-4 rounded-lg max-w-md w-full mx-auto">
+        <h1 class="text-xl font-bold mb-4">Some title at the top here</h1>
+        <form id="serviceForm">
+            <div class="mb-4">
+                <label for="address" class="block text-gray-700 text-sm font-bold mb-2">Your Address</label>
+                <input type="text" id="address" name="address" placeholder="Enter your address" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" autocomplete="address-line1">
+                <p class="text-xs italic text-gray-600 mt-1">Address Search, autofill</p>
+            </div>
+            <div class="mb-4">
+                <label for="date" class="block text-gray-700 text-sm font-bold mb-2">Preferred Date</label>
+                <input type="date" id="date" name="date" class="shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+            </div>
+            <div class="mb-4">
+                <label for="services" class="block text-gray-700 text-sm font-bold mb-2">Services Required</label>
+                <div class="relative">
+                    <select id="services" name="services" multiple class="shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                        <option value="pipe_leak">Pipe leak</option>
+                        <option value="sink">Sink</option>
+                    </select>
+                    <p class="text-xs italic text-gray-600 mt-1">This will be a multiselect checkbox dropdown</p>
+                </div>
+            </div>
+            <div class="flex items-center justify-between">
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                    Submit
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // JavaScript for additional functionality if needed
+    </script>
+</body>
+</html>
