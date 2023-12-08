@@ -1,0 +1,36 @@
+{
+  "editor.formatOnSave": true,
+  "workbench.startupEditor": "newUntitledFile",
+  "window.restoreWindows": "none",
+  "python.defaultInterpreterPath": "C:\Users\Indika\anaconda3\python.exe",
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
+  },
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "bracket-pair-colorizer-2.depreciation-notice": false,
+  "latex-workshop.view.pdf.viewer": "tab",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "[css]": {
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "prettier.formatOnSave": true,
+  "workbench.colorTheme": "Community Material Theme High Contrast",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.wordWrap": "on",
+  "[python]": {
+    "editor.formatOnType": true
+  }
+}
