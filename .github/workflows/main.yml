@@ -1,0 +1,60 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+      - Task-4---Spin-up-NestJS-Service
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Install dependencies for backend
+        run: |
+          cd src/backend/NestJS
+          npm ci
+
+      - name: Build and test backend
+        run: |``
+          cd src/backend/NestJS
+          npm run build
+          npm run test
+
+      - name: Install dependencies for frontend
+        run: |
+          cd src/frontend
+          npm ci
+
+      - name: Build frontend
+        run: |
+          cd src/frontend
+          npm run build
+
+      - name: Install dependencies for CDK
+        run: |
+          cd infra/cdk
+          npm ci
+
+      - name: Build CDK
+        run: |
+          cd infra/cdk
+          npm run build
+
+      - name: Deploy with CDK
+        run: |
+          cd infra/cdk
+          npx cdk deploy --require-approval never
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: "us-east-1"
