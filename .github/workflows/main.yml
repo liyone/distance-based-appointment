@@ -23,23 +23,23 @@ jobs:
         run: npm install -g aws-cdk
 
       - name: Install backend dependencies
-        run: npm ci
+        run: npm install
         working-directory: src/backend/NestJS
 
       - name: Build backend
         run: npm run build
         working-directory: src/backend/NestJS
 
-      - name: Install frontend dependencies
-        run: npm ci
-        working-directory: src/frontend
+      # - name: Install frontend dependencies
+      #   run: npm install
+      #   working-directory: src/frontend
 
-      - name: Build frontend
-        run: npm run build
-        working-directory: src/frontend
+      # - name: Build frontend
+      #   run: npm run build
+      #   working-directory: src/frontend
 
       - name: Install CDK dependencies
-        run: npm ci
+        run: npm install
         working-directory: src/infra/cdk
 
       - name: Build CDK
