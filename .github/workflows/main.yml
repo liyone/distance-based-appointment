@@ -1,4 +1,4 @@
-name: CI/CD Pipeline
+name: CI/CD
 
 on:
   push:
@@ -23,26 +23,33 @@ jobs:
         run: npm install -g aws-cdk
 
       - name: Install backend dependencies
-        run: cd src/backend/NestJS && npm ci
+        run: npm ci
+        working-directory: src/backend/NestJS
 
       - name: Build backend
-        run: cd src/backend/NestJS && npm run build
+        run: npm run build
+        working-directory: src/backend/NestJS
 
       - name: Install frontend dependencies
-        run: cd src/frontend && npm ci
+        run: npm ci
+        working-directory: src/frontend
 
       - name: Build frontend
-        run: cd src/frontend && npm run build
+        run: npm run build
+        working-directory: src/frontend
 
       - name: Install CDK dependencies
-        run: cd infra/cdk && npm ci
+        run: npm ci
+        working-directory: src/infra/cdk
 
       - name: Build CDK
-        run: cd infra/cdk && npm run build
+        run: npm run build
+        working-directory: src/infra/cdk
 
       - name: Deploy CDK Stack
-        run: cd infra/cdk && npx cdk deploy --require-approval never
+        run: npx cdk deploy --require-approval never
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: 'us-east-1'
+        working-directory: src/infra/cdk
