@@ -1,30 +1,30 @@
 # Project Tasks Breakdown
 
-## 1. Make AWS Account
+## 1. Set Up AWS Account
 
-**Summary:** Establish a new AWS account for the project.
+**Summary:** Create and configure an AWS account for the project.
 
-**Description:** Set up a new Amazon Web Services (AWS) account to host and manage all the cloud resources needed for the project. This includes setting up the appropriate permissions and access controls.
+**Description:** Establish a new Amazon Web Services (AWS) account to host and manage the cloud resources required for the project. This involves creating the account, setting up necessary permissions and access controls, and ensuring the account is ready to host the project's cloud resources.
 
 **Acceptance Criteria:**
 
-- A new AWS account is created.
-- Necessary permissions and access controls are configured.
-- The account is ready to host cloud resources for the project.
+- A new AWS account is successfully created.
+- Permissions and access controls are properly configured.
+- The AWS account is fully prepared to host the project's cloud resources.
 
 ---
 
-## 2. Mockup Design for Mobile App
+## 2. Design Mockups for Mobile App
 
-**Summary:** Design mockups for the mobile application.
+**Summary:** Create visually appealing and user-friendly mockup designs for the mobile application.
 
-**Description:** Create detailed mockup designs for the mobile-first application, focusing on user experience and interface. The designs should be visually appealing and user-friendly.
+**Description:** Develop detailed mockup designs for the mobile-first application, focusing on enhancing user experience and interface. The designs should be visually appealing, intuitive, and responsive to different screen sizes.
 
 **Acceptance Criteria:**
 
-- Mockup designs are created for key screens of the app.
+- Mockup designs are created for key screens of the mobile app.
 - The designs are reviewed and approved by the design team.
-- The mockups are mobile-first and responsive.
+- The mockups follow mobile-first design principles and are responsive across different devices.
 
 ---
 
