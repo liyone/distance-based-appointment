@@ -5,14 +5,13 @@ export const handler = ApiHandler(async (event) => {
   const requestBody = JSON.parse(event.body || "{}");
   const pathParams = event.pathParameters || {};
   const queryParams = event.queryStringParameters || {};
-  console.log(event)
+  console.log(event) // This is the request body
+  //THese are all useless below
+  //TODO: Figure out how to get the pathParams and queryParams
   console.log(requestBody);
   console.log(pathParams);
   console.log(queryParams);
   
-  // Use the requestBody variable to access the body of the request
-  // Use the pathParams variable to access the path parameters
-  // Use the queryParams variable to access the query parameters
 
   return {
     statusCode: 200,

@@ -58,25 +58,14 @@
 
 ---
 
-## 4. Spin up NestJS Service in Lambda
+## 4. Spin up SST backend service
 
-**Summary:** Implement a NestJS service on AWS Lambda.
-
-**Description:** Develop and deploy a NestJS service within AWS Lambda to handle backend logic. Ensure that the service is scalable and integrates seamlessly with other AWS services.
-
-**Acceptance Criteria:**
-
-- A NestJS service is successfully deployed on AWS Lambda.
-- The service is tested for scalability and performance.
-- Integration with other AWS services is verified.
 
 ---
 
-## 5. Spin up TURSO Database in Lambda
+## 5. Spin up TURSO Database in Lambda (We may use Dynamo or SST supported Databases)
 
-**Summary:** Deploy a TURSO Database in Lambda, with a fallback to DynamoDB.
-
-**Description:** Deploy TURSO Database within AWS Lambda, ensuring its compatibility and performance. If TURSO doesn't meet requirements, fallback to using DynamoDB.
+- Lets go with dynano for now?
 
 **Acceptance Criteria:**
 
