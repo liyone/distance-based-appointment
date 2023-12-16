@@ -67,3 +67,9 @@ https://medium.com/nextfaze/deploying-serverless-api-with-nestjs-and-aws-cdk-3d4
     - [ ] Gather training data
     - [ ] Create designs (figma, AI generated)
     - [ ] Write feature tickets
+
+# Backend
+- Somehow login locally with your AWS account 
+- All you have to do is run `yarn sst dev` in `src/backend`
+  - You may need to register for an account. It will deploy an SST stack into your AWS account
+
