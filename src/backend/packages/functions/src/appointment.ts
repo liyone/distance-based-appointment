@@ -61,7 +61,7 @@ export const handler: SSTAPIGatewayProxyHandler = async (event: SSTAPIGatewayPro
     return {
       statusCode: 200,
       body: JSON.stringify({
-        message: `Appointment LIST HERE`,
+        message: `Appointment LIST HERE: ${date}-${address}}`,
         date: date,
         address: address,
         // TODO: Return the fetched appointment
