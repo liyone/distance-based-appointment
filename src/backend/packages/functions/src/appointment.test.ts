@@ -1,5 +1,5 @@
-import { handler } from '../src/appointment';
-import { APIGatewayProxyEvent } from 'aws-lambda';
+import { handler } from '../src/appointment'
+import { APIGatewayProxyEvent } from 'aws-lambda'
 
 describe('GET /appointment/{id}', () => {
   it('returns the correct response', async () => {
@@ -45,16 +45,15 @@ describe('GET /appointment/{id}', () => {
         resourcePath: '',
       },
       resource: '',
-    };
-
-    const response = await handler(event as any, {} as any, {} as any);
-    if (response) {
-      expect(response.statusCode).toBe(200);
-      const body = JSON.parse(response.body);
-      expect(body.message).toBe('Appointment with ID: 123');
     }
 
-    
+    const response = await handler(event as any, {} as any, {} as any)
+    if (response) {
+      expect(response.statusCode).toBe(200)
+      const body = JSON.parse(response.body)
+      expect(body.message).toBe('Appointment with ID: 123')
+    }
+
     // Add any other assertions needed for your test
-  });
-});
+  })
+})
