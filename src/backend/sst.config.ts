@@ -1,6 +1,7 @@
 import { SSTConfig } from "sst";
 import { API } from "./stacks/MyStack";
 import { MapsV2API } from "./stacks/MapsStack";
+import { AppointmentAPI } from "./stacks/AppointmentStack";
 
 export default {
   config(_input) {
@@ -10,7 +11,8 @@ export default {
     };
   },
   stacks(app) {
-    app.stack(API);
+    // app.stack(API);
     app.stack(MapsV2API)
+    app.stack(AppointmentAPI)
   }
 } satisfies SSTConfig;
