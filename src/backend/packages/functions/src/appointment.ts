@@ -1,7 +1,7 @@
-import { APIGatewayProxyHandler } from 'aws-lambda';
+import { APIGatewayProxyHandler } from 'aws-lambda'
 
 export const handler: APIGatewayProxyHandler = async (event) => {
-  const appointmentId = event.pathParameters?.id;
+  const appointmentId = event.pathParameters?.id
 
   // TODO: Fetch the appointment with the given ID from your data store
 
@@ -11,5 +11,5 @@ export const handler: APIGatewayProxyHandler = async (event) => {
       message: `Appointment with ID: ${appointmentId}`,
       // TODO: Return the fetched appointment
     }),
-  };
-};
+  }
+}
