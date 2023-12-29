@@ -68,10 +68,10 @@ export const handler: SSTAPIGatewayProxyHandler = async (event: SSTAPIGatewayPro
       }),
     }
   } else if (httpMethod === 'POST' && path === '/appointment') {
-    //TODO: This is untested, do it with postman
-    // Handle POST /appointments
+    //TODO: I feel like this should be a separate handler, but it looks ugly.. What to do?
+    //TODO also we should use postman to test
     const appointmentData = event.body ? JSON.parse(event.body) : {}
-    return appointmentData
+    return { ...appointmentData, statusCode: 200 }
     // Use appointmentData to create a new appointment in your data store
   } else {
     // Return a 404 Not Found response

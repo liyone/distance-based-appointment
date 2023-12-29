@@ -51,4 +51,32 @@ describe('GET /appointment/{id}', () => {
 
     // Add any other assertions needed for your test
   })
+
+  it('should create a new appointment', async () => {
+    const event: SSTAPIGatewayProxyEvent = {
+      rawPath: '/appointment',
+      pathParameters: null,
+      requestContext: {
+        http: {
+          method: 'POST',
+        },
+      },
+      queryStringParameters: null,
+      body: JSON.stringify({
+        // TODO: Add the necessary appointment data for testing
+        data: 'test',
+      }),
+    }
+
+    const response: CustomResponse = await handler(event, {} as any)
+    if (response) {
+      expect(response.statusCode).toBe(200)
+      expect(response.data).toBe('test')
+      // Add assertions to check the response body
+      // For example, if the response body should contain the created appointment:
+      // expect(body.appointmentId).toBeDefined()
+    }
+
+    // Add any other assertions needed for your test
+  })
 })
